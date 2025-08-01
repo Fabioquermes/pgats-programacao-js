@@ -1,3 +1,13 @@
+// Exporta as funções (ESM)
+export {
+  geradorDeTagsDeIdentificacao,
+  verificarSePodeSerAdotado,
+  calcularConsumoDeRacao,
+  decidirTipoDeAtividadePorPorte,
+  buscarDadoAsync
+};
+
+
 // 1. Gera tag de identificação em maiúsculas
 function geradorDeTagsDeIdentificacao(nome) {
   return nome.toUpperCase();
@@ -26,11 +36,3 @@ async function buscarDadoAsync() {
   return new Promise(resolve => setTimeout(() => resolve('Pipoca'), 10));
 }
 
-// Exporta as funções (ESM)
-export {
-  geradorDeTagsDeIdentificacao,
-  verificarSePodeSerAdotado,
-  calcularConsumoDeRacao,
-  decidirTipoDeAtividadePorPorte,
-  buscarDadoAsync
-};
