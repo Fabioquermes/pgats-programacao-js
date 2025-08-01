@@ -1,4 +1,7 @@
-// Exporta as funções (ESM)
+/** 
+ 
+    TRABALHANDO NA ENTREGA, ENTREGA INVALIDA.
+
 export {
   geradorDeTagsDeIdentificacao,
   verificarSePodeSerAdotado,
@@ -36,3 +39,4 @@ async function buscarDadoAsync() {
   return new Promise(resolve => setTimeout(() => resolve('Pipoca'), 10));
 }
 
+*/
