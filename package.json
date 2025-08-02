@@ -1,4 +1,4 @@
-{
+/**{
   "name": "pgats-programacao",
   "version": "1.0.0",
   "description": "",
@@ -12,5 +12,17 @@
   "license": "ISC",
   "devDependencies": {
     "mocha": "^11.7.1"
+  }
+}
+*/
+
+{
+  "name": "projeto-pets",
+  "type": "module",
+  "scripts": {
+    "test": "mocha testes/trabalho-final.js"
+  },
+  "devDependencies": {
+    "mocha": "^10.0.0"
   }
 }
