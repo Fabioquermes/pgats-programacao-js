@@ -46,7 +46,7 @@
 #      - nome: Executando Testes Unitario
 #        run: yarn run testes
 
-name: Node.js CI
+name: Trabalho Final CI
 
 on:
   push:
