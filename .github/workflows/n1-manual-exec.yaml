@@ -2,7 +2,7 @@
 # Disparo manual a parti de 1 clique:
 
 # nome da 'pipeline'
-name: 'Execução Trabalho Final'
+name: 'Execução Manual'
 
 # regras de disparo (gatilhos/triggers)
 # gatilhos de execução manual = workflow_dispatch
