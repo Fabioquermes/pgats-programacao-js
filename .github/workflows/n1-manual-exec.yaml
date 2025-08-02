@@ -1,51 +1,77 @@
+
 # CI N1 - Entrega de Trabalho Final
 # Disparo manual a parti de 1 clique:
 
 # nome da 'pipeline'
-name: 'Execução Manual'
+#name: 'Execução Manual'
 
 # regras de disparo (gatilhos/triggers)
 # gatilhos de execução manual = workflow_dispatch
 
-on:
-  workflow_dispatch:
+#on:
+#  workflow_dispatch:
 
 # trabalhos / tarefas dentro do papiline = jobs
-jobs:
-  tests-unitario:
+#jobs:
+#  tests-unitario:
 
     # maquina que o job vai executar
-    runs-on: ubuntu-latest
+#    runs-on: ubuntu-latest
 
     # passos do script de build
-    steps:
+#    steps:
       # clone do projeto
-      - uses: actions/checkout@v4
+#      - uses: actions/checkout@v4
 
 
       # instalação do node
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22.x
+#      - uses: actions/setup-node@v4
+#        with:
+#          node-version: 22.x
 
 
       # instalação do Yarn
-      - nome: Instalando Yarn
-        run: npm install -g yarn
+#      - nome: Instalando Yarn
+#        run: npm install -g yarn
 
       # instalação das dependencias
-      - nome: Instalando dependencias
-        run: yarn
+#      - nome: Instalando dependencias
+#        run: yarn
 
       # instalação do Playwright
-      - nome: Instalando Playwright
-        run:  yarn playwright install
+#      - nome: Instalando Playwright
+#        run:  yarn playwright install
 
       # executando os testes unitario
-      - nome: Executando Testes Unitario
-        run: yarn run testes
+#      - nome: Executando Testes Unitario
+#        run: yarn run testes
 
-      
+name: Node.js CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v3
+
+      - name: Instalar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Rodar testes
+        run: npm test
 
 
 
